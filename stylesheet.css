@@ -16,22 +16,23 @@
 {
     width: 100%;
     max-width: 540px;
-    background: #878485;
-    margin: 100px auto 20px;
+    background: lightgoldenrodyellow;
+    margin: 200px auto 20px;
     padding:  40px 30px 70px;
     border-radius: 20px;
 } 
 .toDoApp h2{
-    color: #c90fe3b0;
+    color: crimson;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-style: oblique;
 }
 .row{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #65db9e;
+    background: lightcyan;
     border-radius:30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -51,8 +52,8 @@ button
     outline: none;
     background: transparent;
     padding: 16px 50px;
-    background: #ff5945;
-    color: darkcyan;  
+    background: #cde0e3;
+    color: rgb(223, 40, 34);  
     font-size: 16px;
     cursor: pointer;
     border-radius: 20px;  
@@ -65,13 +66,13 @@ ul li{
     cursor: pointer;
     position: relative;
 }
-ul li ::before{
+ul li::before{
     content: '';
     position: absolute;
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    /* add image */
+    /* add image for unchecked circle*/ 
     background-size: cover ;
     background-position: center;
     top: 12px;
@@ -81,4 +82,24 @@ ul li.checked
 {
     color: darkmagenta;
     text-decoration: line-through;
+}
+ul li.checked::before
+{
+    /* add image for checked cricel */
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: darkgoldenrod;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover
+{
+    background:#878485;
 }
